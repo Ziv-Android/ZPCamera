@@ -14,6 +14,7 @@ import static android.opengl.GLES20.*;
  */
 public class GLRenderer implements GLSurfaceView.Renderer {
     /**
+     * Called when the surface is created or recreated.
      * 当GLSurfaceView初始创建时、设备唤醒时、重新启动该Activity时被回调
      */
     @Override
@@ -31,6 +32,7 @@ public class GLRenderer implements GLSurfaceView.Renderer {
     }
 
     /**
+     * Called when the surface changed size.
      * 当GLSurfaceView初始创建时，或者GLSurfaceView的大小发生改变时，比如设备旋转屏幕
      */
     @Override
@@ -39,8 +41,8 @@ public class GLRenderer implements GLSurfaceView.Renderer {
     }
 
     /**
+     * Called to draw the current frame.
      * 会被GL线程循环使用，每循环一次，就会将内容绘制在屏幕上
-     * @param gl
      */
     @Override
     public void onDrawFrame(GL10 gl) {
