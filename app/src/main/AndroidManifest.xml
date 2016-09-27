@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ziv.zpcamera">
 
+    <!--声明使用的OpenGL ES API版本，此处使用的是2.0，需要Android2.2 及以上版本支持-->
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+    <!--若使用纹理压缩，西药声明支持的纹理压缩格式-->
+    <supports-gl-texture android:name="GL_OES_compressed_ETC1_RGB8_texture" />
+    <supports-gl-texture android:name="GL_OES_compressed_paletted_texture" />
+
     <application
         android:name=".ZPCameraApplication"
         android:allowBackup="true"
